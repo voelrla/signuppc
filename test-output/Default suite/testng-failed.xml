@@ -4,6 +4,18 @@
   <test name="Default test" verbose="2">
     <classes>
       <class name="signupPC.signupPC.test"/>
+      <class name="signupPC.signupPC.App"/>
+      <class name="signupPC.signupPC.AppTest"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="signupPC.signupPC.test">
+        <methods>
+          <include name="chromedriver"/>
+          <include name="signup"/>
+        </methods>
+      </class> <!-- signupPC.signupPC.test -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

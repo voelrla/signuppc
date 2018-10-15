@@ -17,10 +17,10 @@ import java.util.List;
 /**
  * Unit test for simple App.
  */
-public class test extends AppTest {
+public class test extends setup {
 
 	@Test
-	public void signup() throws AWTException {
+	public static void signup() throws AWTException {
 		open("http://wemakeprice.com");
 
 		$(By.id("joinTypeBtn")).click(); // 회원가입 버튼 선택
