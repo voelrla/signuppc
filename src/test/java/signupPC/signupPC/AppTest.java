@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 /**
  * Unit test for simple App.
  */
-public class AppTest extends setup {
+public class AppTest {
 	public static WebDriver driver;
 
 	@Test
