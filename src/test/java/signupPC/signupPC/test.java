@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Unit test for simple App.
  */
-public class test extends setup {
+public class test extends setting {
 
 	@Test
 	public static void signup() throws AWTException {
