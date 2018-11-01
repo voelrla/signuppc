@@ -32,20 +32,5 @@
 			<version>6.14.3</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.apache.maven</groupId>
-			<artifactId>maven-plugin-api</artifactId>
-			<version>3.5.0</version>
-		</dependency>
-
-
 	</dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
-			</plugin>
-		</plugins>
-	</build>
 </project>
