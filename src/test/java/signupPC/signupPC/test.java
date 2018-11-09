@@ -21,6 +21,7 @@ public class test extends setting {
 
 	@Test
 	public static void signup() throws AWTException {
+
 		open("http://wemakeprice.com");
 
 		$(By.id("joinTypeBtn")).click(); // 회원가입 버튼 선택
