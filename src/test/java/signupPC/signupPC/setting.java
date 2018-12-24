@@ -14,12 +14,15 @@ import java.util.Calendar;
 
 public class setting {
 	public static WebDriver driver;
+	public static String id;
 
 	@BeforeMethod
 	public void chromedriver() {
 		System.setProperty("webdriver.chrome.driver", "C:\\eclipse\\chromedriver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		WebDriverRunner.setWebDriver(driver);
+
+		id = "autosignup" + time(); // id 생성
 
 	}
 
@@ -32,6 +35,12 @@ public class setting {
 		Robot rb = new Robot();
 		rb.keyPress(KeyEvent.VK_CONTROL);
 		rb.keyPress(KeyEvent.VK_T);
+	}
+
+	public static void tabfocus() throws AWTException {
+		Robot rb = new Robot();
+		rb.keyPress(KeyEvent.VK_ALT);
+		rb.keyPress(KeyEvent.VK_TAB);
 	}
 
 	public static void closetab() throws AWTException {

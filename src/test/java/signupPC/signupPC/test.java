@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import com.codeborne.selenide.SelenideElement;
 
 import java.awt.AWTException;
+import java.awt.Robot;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -23,11 +24,12 @@ public class test extends setting {
 	public static void signup() throws AWTException {
 
 		open("http://wemakeprice.com");
+		tabfocus();
 
 		$(By.id("joinTypeBtn")).click(); // 회원가입 버튼 선택
 		$(By.xpath("//div[@id='_contents']/div/div/div/a/div/span/span")).click();
 
-		$(By.id("_personalEmailId")).sendKeys("autosignup" + time());
+		$(By.id("_personalEmailId")).sendKeys(id);
 		$(By.id("_personalEmailAddr")).sendKeys("yopmail.com");
 
 		$(By.id("_password")).sendKeys("qwer1234");
@@ -86,9 +88,5 @@ public class test extends setting {
 			$(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='전체동의'])[1]/span[1]")).click();
 			$(By.xpath("//div[@id='_joinConfirm']/a/span")).click();
 		}
-	}
-
-	@AfterMethod
-	public void end() {
 	}
 }
