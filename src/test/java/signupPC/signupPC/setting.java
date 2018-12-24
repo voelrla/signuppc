@@ -41,6 +41,7 @@ public class setting {
 		Robot rb = new Robot();
 		rb.keyPress(KeyEvent.VK_ALT);
 		rb.keyPress(KeyEvent.VK_TAB);
+		rb.keyPress(KeyEvent.VK_ENTER);
 	}
 
 	public static void closetab() throws AWTException {
