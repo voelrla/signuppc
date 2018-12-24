@@ -25,6 +25,7 @@ public class test extends setting {
 
 		open("http://wemakeprice.com");
 		tabfocus();
+		enter();
 
 		$(By.id("joinTypeBtn")).click(); // 회원가입 버튼 선택
 		$(By.xpath("//div[@id='_contents']/div/div/div/a/div/span/span")).click();
