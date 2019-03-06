@@ -1,7 +1,7 @@
 package signupPC.signupPC;
 
 import org.openqa.selenium.By;
-
+import org.openqa.selenium.Keys;
 import org.testng.annotations.AfterMethod;
 
 import org.testng.annotations.Test;
@@ -24,7 +24,7 @@ public class test extends setting {
 	public static void signup() throws AWTException {
 
 		open("http://wemakeprice.com");
-		switchTo().window(0);
+
 		// tabfocus();
 		// enter();
 
@@ -51,9 +51,12 @@ public class test extends setting {
 			opentab(); // 신규 탭 생성
 			sleep(2000);
 
+
+	//		open("https://www.pushbullet.com/#sms/ujEUBotXlYqsjAcQMJtx24/19"); // pushbullet.com 이동
+			driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");
 			switchTo().window(1); // 탭 이동
 			open("https://www.pushbullet.com/#sms/ujEUBotXlYqsjAcQMJtx24/19"); // pushbullet.com 이동
-
+			
 			$(By.id("sign-in-btn")).click();
 			$(By.xpath("//div[@id='onecup']/div[2]/div[2]/button")).click();
 
@@ -66,7 +69,7 @@ public class test extends setting {
 			$(By.xpath("//div[@id='passwordNext']/content/span")).click();
 
 			sleep(10000);
-			$(By.xpath("//div[@id='sink']/div[2]/div/div/div[5]/div")).click(); // Texting 메뉴 선택
+			$(By.xpath("//div[@id='sink']/div[2]/div/div/div[5]/div")).click(); // Text
 
 			SelenideElement sms = $(By.xpath("//div[@id='sidebar']/div[6]"));
 			String smstext = sms.getText(); // SMS문자 추출
