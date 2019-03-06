@@ -91,8 +91,8 @@ public class test extends setting {
 		} else {
 			$(By.id("_birth")).sendKeys("19880505");
 			$(By.xpath("//div[@id='_memberJoin']/ul/li[7]/div/div/label/span")).click(); // 라디오 버튼 선택
-			$(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='전체동의'])[1]/span[1]")).click();
-			$(By.xpath("//div[@id='_joinConfirm']/a/span")).click();
+			$(By.xpath("//label[contains(.,'전체동의')]")).click();
+			$(By.xpath("//span[contains(.,'동의하고 회원가입')]")).click();
 		}
 	}
 }
