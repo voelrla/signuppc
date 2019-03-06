@@ -6,6 +6,7 @@ import org.testng.annotations.AfterMethod;
 
 import org.testng.annotations.Test;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
 import java.awt.AWTException;
@@ -24,6 +25,7 @@ public class test extends setting {
 	public static void signup() throws AWTException {
 
 		open("http://wemakeprice.com");
+		switchTo().window(0);
 
 		// tabfocus();
 		// enter();
