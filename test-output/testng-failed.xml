@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test name="Default test" verbose="2">
-    <classes>
-      <class name="signupPC.signupPC.test"/>
-      <class name="signupPC.signupPC.App"/>
-      <class name="signupPC.signupPC.AppTest"/>
-    </classes>
-  </test> <!-- Default test -->
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="signupPC.signupPC.test">
         <methods>

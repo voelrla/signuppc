@@ -68,8 +68,8 @@ public class test extends setting {
 			$(By.name("password")).sendKeys("msync1q2w3e");
 			$(By.xpath("//div[@id='passwordNext']/content/span")).click();
 
-			sleep(10000);
-			$(By.xpath("//div[@id='sink']/div[2]/div/div/div[5]/div")).click(); // Text
+			sleep(10000);  
+			$(By.xpath("//div[@id='sink']/div[2]/div/div/div[5]/div")).click(); //Text
 
 			SelenideElement sms = $(By.xpath("//div[@id='sidebar']/div[6]"));
 			String smstext = sms.getText(); // SMS문자 추출
