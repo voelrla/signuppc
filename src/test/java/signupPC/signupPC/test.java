@@ -47,16 +47,17 @@ public class test extends setting {
 		if (checkphone.isEmpty() == false) {
 			$(By.xpath("//div[@id='_phoneConfirm']/p[4]/a/span")).click();
 			confirm("인증번호가 입력하신 번호로 발송되었습니다.");
+			sleep(1000);
 
 			opentab(); // 신규 탭 생성
+
+			// open("https://www.pushbullet.com/#sms/ujEUBotXlYqsjAcQMJtx24/19"); //
+			// pushbullet.com 이동
+
 			sleep(2000);
-
-
-	//		open("https://www.pushbullet.com/#sms/ujEUBotXlYqsjAcQMJtx24/19"); // pushbullet.com 이동
-			driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");
 			switchTo().window(1); // 탭 이동
 			open("https://www.pushbullet.com/#sms/ujEUBotXlYqsjAcQMJtx24/19"); // pushbullet.com 이동
-			
+
 			$(By.id("sign-in-btn")).click();
 			$(By.xpath("//div[@id='onecup']/div[2]/div[2]/button")).click();
 
@@ -68,8 +69,8 @@ public class test extends setting {
 			$(By.name("password")).sendKeys("msync1q2w3e");
 			$(By.xpath("//div[@id='passwordNext']/content/span")).click();
 
-			sleep(10000);  
-			$(By.xpath("//div[@id='sink']/div[2]/div/div/div[5]/div")).click(); //Text
+			sleep(10000);
+			$(By.xpath("//div[@id='sink']/div[2]/div/div/div[5]/div")).click(); // Text
 
 			SelenideElement sms = $(By.xpath("//div[@id='sidebar']/div[6]"));
 			String smstext = sms.getText(); // SMS문자 추출
