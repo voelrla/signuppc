@@ -18,7 +18,7 @@ public class setting {
 
 	@BeforeMethod
 	public void chromedriver() {
-		System.setProperty("webdriver.chrome.driver", "C:\\eclipse\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver();
 		WebDriverRunner.setWebDriver(driver);
 
