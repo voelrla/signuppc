@@ -41,9 +41,9 @@ public class test extends setting {
 		$(By.id("_pwConfirm")).sendKeys("qwer1234");
 
 		$(By.id("_name")).sendKeys("테스트");
-		$(By.id("_phone")).sendKeys("01084695633");
+		$(By.id("_phone")).sendKeys("01043642021");
 
-		$(By.id("_contentsMember")).click(); // 외부영역 클릭
+		$(By.xpath("//div[2]/div/div/div/div/p")).click(); // 외부영역 클릭
 
 		List<SelenideElement> checkphone = $$(By.xpath("//div[@id='_phoneConfirm']/p[4]/a/span"));
 
@@ -94,8 +94,8 @@ public class test extends setting {
 		} else {
 			$(By.id("_birth")).sendKeys("19880505");
 			$(By.xpath("//div[@id='_memberJoin']/ul/li[7]/div/div/label/span")).click(); // 라디오 버튼 선택
-			$(By.xpath("//label[contains(.,'전체동의')]")).click();
-			$(By.xpath("//span[contains(.,'동의하고 회원가입')]")).click();
+			$(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='전체동의'])[1]/span[1]")).click();
+			$(By.xpath("//div[@id='_joinConfirm']/a/span")).click();
 		}
 	}
 }
