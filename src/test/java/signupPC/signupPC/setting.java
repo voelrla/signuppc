@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 
 import java.awt.AWTException;
@@ -21,6 +22,7 @@ public class setting {
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver();
 		WebDriverRunner.setWebDriver(driver);
+		Configuration.browserSize = "1024x768";
 
 		id = "autosignup" + time(); // id 생성
 

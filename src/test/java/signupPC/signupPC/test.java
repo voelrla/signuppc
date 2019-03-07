@@ -25,6 +25,7 @@ public class test extends setting {
 	public static void signup() throws AWTException {
 
 		open("http://wemakeprice.com");
+		driver.manage().window().maximize();
 		switchTo().window(0);
 
 		// tabfocus();
