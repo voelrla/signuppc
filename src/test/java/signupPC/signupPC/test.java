@@ -22,11 +22,11 @@ import java.util.List;
 public class test extends setting {
 
 	@Test
-	public static void signup() throws AWTException {
+	public static void signup() throws Exception {
 
 		open("http://wemakeprice.com");
 		driver.manage().window().maximize();
-		switchTo().window(0);
+		Mclick();
 
 		// tabfocus();
 		// enter();

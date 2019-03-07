@@ -9,6 +9,7 @@ import com.codeborne.selenide.WebDriverRunner;
 
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -22,7 +23,7 @@ public class setting {
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver();
 		WebDriverRunner.setWebDriver(driver);
-		Configuration.browserSize = "1024x768";
+//		Configuration.browserSize = "1024x768";
 
 		id = "autosignup" + time(); // id 생성
 
@@ -58,5 +59,14 @@ public class setting {
 
 	public static String getNumber(String code) {
 		return code.replaceAll("[^0-9]", "");
+	}
+
+	public static void Mclick() throws Exception {
+		Robot robot = new Robot();
+
+		// SET THE MOUSE X Y POSITION
+		robot.mouseMove(300, 550);
+		robot.mousePress(InputEvent.BUTTON1_MASK);
+		robot.mouseRelease(InputEvent.BUTTON1_MASK);
 	}
 }
