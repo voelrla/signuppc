@@ -41,7 +41,7 @@ public class test extends setting {
 		$(By.id("_pwConfirm")).sendKeys("qwer1234");
 
 		$(By.id("_name")).sendKeys("테스트");
-		$(By.id("_phone")).sendKeys("01043642021");
+		$(By.id("_phone")).sendKeys("01026989109");
 
 		$(By.xpath("//div[2]/div/div/div/div/p")).click(); // 외부영역 클릭
 
